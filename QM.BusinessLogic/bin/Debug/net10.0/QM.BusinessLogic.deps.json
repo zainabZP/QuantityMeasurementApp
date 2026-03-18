@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "QM.BusinessLogic/1.0.0": {
+        "dependencies": {
+          "QM.Models": "1.0.0",
+          "QM.Repository": "1.0.0"
+        },
+        "runtime": {
+          "QM.BusinessLogic.dll": {}
+        }
+      },
+      "QM.Models/1.0.0": {
+        "runtime": {
+          "QM.Models.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "QM.Repository/1.0.0": {
+        "dependencies": {
+          "QM.Models": "1.0.0"
+        },
+        "runtime": {
+          "QM.Repository.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QM.BusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QM.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QM.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\obj\Debug\net10.0\QM.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfoInputs.cache
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfo.cs
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\obj\Debug\net10.0\QM.Models.csproj.CoreCompileInputs.cache
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\obj\Debug\net10.0\QM.Models.sourcelink.json
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\bin\Debug\net10.0\QM.Models.deps.json
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\bin\Debug\net10.0\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\bin\Debug\net10.0\QM.Models.pdb
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\obj\Debug\net10.0\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\obj\Debug\net10.0\refint\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\obj\Debug\net10.0\QM.Models.pdb
+C:\QuantityMeasurementApp\backup\UC15\QM.Models\obj\Debug\net10.0\ref\QM.Models.dll
