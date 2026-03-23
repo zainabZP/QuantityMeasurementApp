@@ -30,9 +30,9 @@ namespace QuantityMeasurementApp
                 var services = new ServiceCollection();
                 
                 // Configure DbContext
-                var connectionString = "Data Source=QuantityMeasurement.db";
+                var connectionString = "Data Source=WASEEM\\SQLEXPRESS;Initial Catalog=QuantityMeasurementDb;Integrated Security=true;TrustServerCertificate=true;";
                 services.AddDbContext<QuantityMeasurementDbContext>(options =>
-                    options.UseSqlite(connectionString)
+                    options.UseSqlServer(connectionString)
                 );
 
                 // Register services
@@ -84,19 +84,18 @@ namespace QuantityMeasurementApp
             bool running = true;
             while (running)
             {
-                Console.WriteLine("\n╔═══════════════════════════════════════════════════╗");
-                Console.WriteLine("║   Quantity Measurement Application with Database   ║");
-                Console.WriteLine("║            (UC16 - Database Integration)          ║");
-                Console.WriteLine("╚═══════════════════════════════════════════════════╝");
-                Console.WriteLine("\n1. Compare Quantities");
-                Console.WriteLine("2. Convert Quantity");
-                Console.WriteLine("3. Add Quantities");
-                Console.WriteLine("4. Subtract Quantities");
-                Console.WriteLine("5. Divide Quantities");
-                Console.WriteLine("6. View All Measurements (Database)");
-                Console.WriteLine("7. Get Measurement Count");
-                Console.WriteLine("8. Query by Operation Type");
-                Console.WriteLine("9. Clear All Measurements");
+                Console.WriteLine("\n╔═════════════════════════════════════════════╗");
+                Console.WriteLine("║   Quantity Measurement Application with DB   ║");
+                Console.WriteLine("║       (UC16 - Database Integration)         ║");
+                Console.WriteLine("╚═════════════════════════════════════════════╝");
+                Console.WriteLine("\n1. Length");
+                Console.WriteLine("2. Weight");
+                Console.WriteLine("3. Volume");
+                Console.WriteLine("4. Temperature");
+                Console.WriteLine("5. View All Measurements (Database)");
+                Console.WriteLine("6. Get Measurement Count");
+                Console.WriteLine("7. Query by Operation Type");
+                Console.WriteLine("8. Clear All Measurements");
                 Console.WriteLine("0. Exit");
                 Console.Write("\nChoice: ");
 
@@ -106,17 +105,16 @@ namespace QuantityMeasurementApp
                 {
                     switch (choice)
                     {
-                        case "1": HandleCompare(controller); break;
-                        case "2": HandleConvert(controller); break;
-                        case "3": HandleAdd(controller); break;
-                        case "4": HandleSubtract(controller); break;
-                        case "5": HandleDivide(controller); break;
-                        case "6": DisplayAllMeasurements(repository); break;
-                        case "7": DisplayMeasurementCount(repository); break;
-                        case "8": QueryByOperation(repository); break;
-                        case "9": ClearAllMeasurements(repository); break;
+                        case "1": RunOperationsMenu("Length", new[] { "FEET", "INCHES", "YARDS", "CENTIMETERS" }, controller); break;
+                        case "2": RunOperationsMenu("Weight", new[] { "GRAM", "KILOGRAM", "POUND" }, controller); break;
+                        case "3": RunOperationsMenu("Volume", new[] { "MILLILITRE", "LITRE", "GALLON" }, controller); break;
+                        case "4": RunOperationsMenu("Temperature", new[] { "CELSIUS", "FAHRENHEIT", "KELVIN" }, controller); break;
+                        case "5": DisplayAllMeasurements(repository); break;
+                        case "6": DisplayMeasurementCount(repository); break;
+                        case "7": QueryByOperation(repository); break;
+                        case "8": ClearAllMeasurements(repository); break;
                         case "0": running = false; break;
-                        default: Console.WriteLine("Invalid choice. Please try again."); break;
+                        default: Console.WriteLine("Invalid choice."); break;
                     }
                 }
                 catch (Exception ex)
@@ -129,111 +127,108 @@ namespace QuantityMeasurementApp
             Console.WriteLine("\nThank you for using Quantity Measurement Application!");
         }
 
-        static void HandleCompare(QuantityMeasurementController controller)
+        static void RunOperationsMenu(string category, string[] units, QuantityMeasurementController controller)
         {
-            Console.Write("Enter first quantity value: ");
-            double val1 = double.Parse(Console.ReadLine() ?? "0");
-            Console.Write("Enter first quantity unit (FEET/INCH/YARD/CM/etc): ");
-            string unit1 = Console.ReadLine() ?? "FEET";
-            Console.Write("Enter measurement type (Length/Weight/Volume/Temperature): ");
-            string type1 = Console.ReadLine() ?? "Length";
+            while (true)
+            {
+                Console.WriteLine($"\n── {category} Operations ──");
+                Console.WriteLine("1. Compare");
+                Console.WriteLine("2. Convert");
+                Console.WriteLine("3. Add");
+                Console.WriteLine("4. Subtract");
+                Console.WriteLine("5. Divide");
+                Console.WriteLine("6. Back");
+                Console.Write("Choice: ");
 
-            Console.Write("Enter second quantity value: ");
-            double val2 = double.Parse(Console.ReadLine() ?? "0");
-            Console.Write("Enter second quantity unit: ");
-            string unit2 = Console.ReadLine() ?? "FEET";
+                string? choice = Console.ReadLine();
+                if (choice == "6") break;
 
-            var q1 = new QuantityDTO(val1, unit1, type1);
-            var q2 = new QuantityDTO(val2, unit2, type1);
+                try
+                {
+                    switch (choice)
+                    {
+                        case "1": HandleCompare(controller, category, units); break;
+                        case "2": HandleConvert(controller, category, units); break;
+                        case "3": HandleAdd(controller, category, units); break;
+                        case "4": HandleSubtract(controller, category, units); break;
+                        case "5": HandleDivide(controller, category, units); break;
+                        default: Console.WriteLine("Invalid choice."); break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"\n[ERROR] {ex.Message}");
+                }
+            }
+        }
+
+        static QuantityDTO ReadDTO(string label, string category, string[] units)
+        {
+            Console.Write($"Enter {label} value: ");
+            double value = double.Parse(Console.ReadLine()!);
+            string unit = SelectUnit($"{label} unit", units);
+            return new QuantityDTO(value, unit, category);
+        }
+
+        static string SelectUnit(string prompt, string[] units)
+        {
+            Console.WriteLine($"Select {prompt}:");
+            for (int i = 0; i < units.Length; i++)
+                Console.WriteLine($"  {i + 1}. {units[i]}");
+            Console.Write("Choice: ");
+            int choice = int.Parse(Console.ReadLine()!) - 1;
+            if (choice < 0 || choice >= units.Length)
+                throw new Exception("Invalid unit choice.");
+            return units[choice];
+        }
+
+        static void HandleCompare(QuantityMeasurementController controller, string category, string[] units)
+        {
+            var q1 = ReadDTO("first", category, units);
+            var q2 = ReadDTO("second", category, units);
+
             var result = controller.PerformCompare(q1, q2);
-
-            Console.WriteLine($"✓ Result: {result.Value} (Equal: {result.Value == 1})");
+            Console.WriteLine(result.Value == 1
+                ? $"\n✔ {q1} == {q2} → EQUAL"
+                : $"\n✔ {q1} != {q2} → NOT EQUAL");
         }
 
-        static void HandleConvert(QuantityMeasurementController controller)
+        static void HandleConvert(QuantityMeasurementController controller, string category, string[] units)
         {
-            Console.Write("Enter quantity value: ");
-            double value = double.Parse(Console.ReadLine() ?? "0");
-            Console.Write("Enter source unit: ");
-            string sourceUnit = Console.ReadLine() ?? "FEET";
-            Console.Write("Enter measurement type (Length/Weight/Volume/Temperature): ");
-            string type = Console.ReadLine() ?? "Length";
-            Console.Write("Enter target unit: ");
-            string targetUnit = Console.ReadLine() ?? "INCH";
+            var source = ReadDTO("source", category, units);
+            string target = SelectUnit("target unit", units);
 
-            var source = new QuantityDTO(value, sourceUnit, type);
-            var result = controller.PerformConvert(source, targetUnit);
-
-            Console.WriteLine($"✓ Converted: {source} = {result}");
+            var result = controller.PerformConvert(source, target);
+            Console.WriteLine($"\n✔ {source} → {result}");
         }
 
-        static void HandleAdd(QuantityMeasurementController controller)
+        static void HandleAdd(QuantityMeasurementController controller, string category, string[] units)
         {
-            Console.Write("Enter first quantity value: ");
-            double val1 = double.Parse(Console.ReadLine() ?? "0");
-            Console.Write("Enter first quantity unit: ");
-            string unit1 = Console.ReadLine() ?? "FEET";
-            Console.Write("Enter measurement type (Length/Weight/Volume): ");
-            string type = Console.ReadLine() ?? "Length";
+            var q1 = ReadDTO("first", category, units);
+            var q2 = ReadDTO("second", category, units);
+            string target = SelectUnit("result unit", units);
 
-            Console.Write("Enter second quantity value: ");
-            double val2 = double.Parse(Console.ReadLine() ?? "0");
-            Console.Write("Enter second quantity unit: ");
-            string unit2 = Console.ReadLine() ?? "FEET";
-
-            Console.Write("Enter target unit for result: ");
-            string targetUnit = Console.ReadLine() ?? "FEET";
-
-            var q1 = new QuantityDTO(val1, unit1, type);
-            var q2 = new QuantityDTO(val2, unit2, type);
-            var result = controller.PerformAdd(q1, q2, targetUnit);
-
-            Console.WriteLine($"✓ Sum: {q1} + {q2} = {result}");
+            var result = controller.PerformAdd(q1, q2, target);
+            Console.WriteLine($"\n✔ {q1} + {q2} = {result}");
         }
 
-        static void HandleSubtract(QuantityMeasurementController controller)
+        static void HandleSubtract(QuantityMeasurementController controller, string category, string[] units)
         {
-            Console.Write("Enter first quantity value: ");
-            double val1 = double.Parse(Console.ReadLine() ?? "0");
-            Console.Write("Enter first quantity unit: ");
-            string unit1 = Console.ReadLine() ?? "FEET";
-            Console.Write("Enter measurement type (Length/Weight/Volume): ");
-            string type = Console.ReadLine() ?? "Length";
+            var q1 = ReadDTO("first", category, units);
+            var q2 = ReadDTO("second", category, units);
+            string target = SelectUnit("result unit", units);
 
-            Console.Write("Enter second quantity value: ");
-            double val2 = double.Parse(Console.ReadLine() ?? "0");
-            Console.Write("Enter second quantity unit: ");
-            string unit2 = Console.ReadLine() ?? "FEET";
-
-            Console.Write("Enter target unit for result: ");
-            string targetUnit = Console.ReadLine() ?? "FEET";
-
-            var q1 = new QuantityDTO(val1, unit1, type);
-            var q2 = new QuantityDTO(val2, unit2, type);
-            var result = controller.PerformSubtract(q1, q2, targetUnit);
-
-            Console.WriteLine($"✓ Difference: {q1} - {q2} = {result}");
+            var result = controller.PerformSubtract(q1, q2, target);
+            Console.WriteLine($"\n✔ {q1} - {q2} = {result}");
         }
 
-        static void HandleDivide(QuantityMeasurementController controller)
+        static void HandleDivide(QuantityMeasurementController controller, string category, string[] units)
         {
-            Console.Write("Enter first quantity value: ");
-            double val1 = double.Parse(Console.ReadLine() ?? "0");
-            Console.Write("Enter first quantity unit: ");
-            string unit1 = Console.ReadLine() ?? "FEET";
-            Console.Write("Enter measurement type (Length/Weight/Volume): ");
-            string type = Console.ReadLine() ?? "Length";
+            var q1 = ReadDTO("numerator", category, units);
+            var q2 = ReadDTO("denominator", category, units);
 
-            Console.Write("Enter second quantity value: ");
-            double val2 = double.Parse(Console.ReadLine() ?? "0");
-            Console.Write("Enter second quantity unit: ");
-            string unit2 = Console.ReadLine() ?? "FEET";
-
-            var q1 = new QuantityDTO(val1, unit1, type);
-            var q2 = new QuantityDTO(val2, unit2, type);
             var result = controller.PerformDivide(q1, q2);
-
-            Console.WriteLine($"✓ Quotient: {q1} / {q2} = {result.Value}");
+            Console.WriteLine($"\n✔ {q1} ÷ {q2} = {result.Value}");
         }
 
         static void DisplayAllMeasurements(IQuantityMeasurementRepository repository)
