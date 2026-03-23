@@ -1,0 +1,16 @@
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\bin\Debug\net10.0\QM.Repository.deps.json
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\bin\Debug\net10.0\QM.Repository.dll
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\bin\Debug\net10.0\QM.Repository.pdb
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\bin\Debug\net10.0\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\bin\Debug\net10.0\QM.Models.pdb
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\QM.Repository.csproj.AssemblyReference.cache
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\QM.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\QM.Repository.AssemblyInfoInputs.cache
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\QM.Repository.AssemblyInfo.cs
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\QM.Repository.csproj.CoreCompileInputs.cache
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\QM.Repository.sourcelink.json
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\QM.Repos.DC6E9CD1.Up2Date
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\QM.Repository.dll
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\refint\QM.Repository.dll
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\QM.Repository.pdb
+C:\QuantityMeasurementApp\backup\UC16\QM.Repository\obj\Debug\net10.0\ref\QM.Repository.dll
