@@ -1,6 +1,8 @@
 using Microsoft.Extensions.Logging;
 using QM.Models.Entities;
 using QM.Repository.Interface;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace QM.Repository.Repository
 {
@@ -12,6 +14,8 @@ namespace QM.Repository.Repository
 
         private readonly List<QuantityMeasurementEntity> _cache;
         private readonly object _cacheLock = new();
+        private readonly string _jsonFilePath = "CacheMeasurements.json";
+        private readonly object _jsonFileLock = new();
 
         public static QuantityMeasurementCacheRepository Instance
         {
@@ -40,6 +44,7 @@ namespace QM.Repository.Repository
                 _cache.Add(entity);
                 _logger?.LogDebug($"Entity saved to cache. Total count: {_cache.Count}");
             }
+            SaveToJsonFile(entity);
         }
 
         public List<QuantityMeasurementEntity> GetAll()
@@ -89,6 +94,51 @@ namespace QM.Repository.Repository
             {
                 return _cache.Where(e => (e.Operand1?.Contains(measurementType) ?? false) ||
                                         (e.Result?.Contains(measurementType) ?? false)).ToList();
+            }
+        }
+
+        private void SaveToJsonFile(QuantityMeasurementEntity entity)
+        {
+            try
+            {
+                lock (_jsonFileLock)
+                {
+                    List<QuantityMeasurementEntity> allData = new();
+
+                    // Read existing data from file if it exists
+                    if (File.Exists(_jsonFilePath))
+                    {
+                        string json = File.ReadAllText(_jsonFilePath);
+                        if (!string.IsNullOrWhiteSpace(json))
+                        {
+                            var options = new JsonSerializerOptions
+                            {
+                                PropertyNameCaseInsensitive = true,
+                                WriteIndented = true
+                            };
+                            allData = JsonSerializer.Deserialize<List<QuantityMeasurementEntity>>(json, options) ?? new();
+                        }
+                    }
+
+                    // Add the new entity
+                    allData.Add(entity);
+
+                    // Write updated data back to file
+                    var jsonOptions = new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true,
+                        WriteIndented = true,
+                        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+                    };
+                    string updatedJson = JsonSerializer.Serialize(allData, jsonOptions);
+                    File.WriteAllText(_jsonFilePath, updatedJson);
+
+                    _logger?.LogDebug($"Entity saved to JSON file: {_jsonFilePath}");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger?.LogError($"Error saving to JSON file: {ex.Message}");
             }
         }
     }

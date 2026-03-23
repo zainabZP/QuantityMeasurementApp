@@ -63,8 +63,13 @@ namespace QuantityMeasurementApp
 
                 logger.LogInformation("Dependency Injection complete. Application ready.");
 
-                // ── Run Application Menu ────────────────────
-                RunMenu(controller, repository, logger);
+                // ── Setup Cache Repository for Legacy Menus ────
+                var cacheRepository = QuantityMeasurementCacheRepository.Instance;
+                var cacheService = new QuantityMeasurementServiceImpl(cacheRepository);
+                var cacheController = new QuantityMeasurementController(cacheService);
+
+                // ── Run Main Application Menu ────────────────────
+                RunMainMenu(cacheController, controller, repository, logger);
 
                 logger.LogInformation("Application completed successfully");
             }
@@ -79,24 +84,17 @@ namespace QuantityMeasurementApp
             }
         }
 
-        static void RunMenu(QuantityMeasurementController controller, IQuantityMeasurementRepository repository, Microsoft.Extensions.Logging.ILogger logger)
+        static void RunMainMenu(QuantityMeasurementController cacheController, QuantityMeasurementController dbController, IQuantityMeasurementRepository dbRepository, Microsoft.Extensions.Logging.ILogger logger)
         {
-            bool running = true;
-            while (running)
+            while (true)
             {
-                Console.WriteLine("\n╔═════════════════════════════════════════════╗");
-                Console.WriteLine("║   Quantity Measurement Application with DB   ║");
-                Console.WriteLine("║       (UC16 - Database Integration)         ║");
-                Console.WriteLine("╚═════════════════════════════════════════════╝");
-                Console.WriteLine("\n1. Length");
-                Console.WriteLine("2. Weight");
-                Console.WriteLine("3. Volume");
-                Console.WriteLine("4. Temperature");
-                Console.WriteLine("5. View All Measurements (Database)");
-                Console.WriteLine("6. Get Measurement Count");
-                Console.WriteLine("7. Query by Operation Type");
-                Console.WriteLine("8. Clear All Measurements");
-                Console.WriteLine("0. Exit");
+                Console.WriteLine("\n╔═══════════════════════════════════════════════════╗");
+                Console.WriteLine("║   Quantity Measurement Application (UC16)          ║");
+                Console.WriteLine("║      With Cache and Database Integration          ║");
+                Console.WriteLine("╚═══════════════════════════════════════════════════╝");
+                Console.WriteLine("\n1. UC1–UC14 Menu (Backward Compatible)");
+                Console.WriteLine("2. UC15 Menu (N-Tier Architecture)");
+                Console.WriteLine("3. Exit");
                 Console.Write("\nChoice: ");
 
                 string? choice = Console.ReadLine();
@@ -105,15 +103,9 @@ namespace QuantityMeasurementApp
                 {
                     switch (choice)
                     {
-                        case "1": RunOperationsMenu("Length", new[] { "FEET", "INCHES", "YARDS", "CENTIMETERS" }, controller); break;
-                        case "2": RunOperationsMenu("Weight", new[] { "GRAM", "KILOGRAM", "POUND" }, controller); break;
-                        case "3": RunOperationsMenu("Volume", new[] { "MILLILITRE", "LITRE", "GALLON" }, controller); break;
-                        case "4": RunOperationsMenu("Temperature", new[] { "CELSIUS", "FAHRENHEIT", "KELVIN" }, controller); break;
-                        case "5": DisplayAllMeasurements(repository); break;
-                        case "6": DisplayMeasurementCount(repository); break;
-                        case "7": QueryByOperation(repository); break;
-                        case "8": ClearAllMeasurements(repository); break;
-                        case "0": running = false; break;
+                        case "1": Console.WriteLine("UC1–UC14 menu not implemented in this version."); break;
+                        case "2": RunNTierMenu(cacheController, dbController, dbRepository, logger); break;
+                        case "3": return;
                         default: Console.WriteLine("Invalid choice."); break;
                     }
                 }
@@ -123,8 +115,86 @@ namespace QuantityMeasurementApp
                     logger.LogError($"Operation failed: {ex.Message}");
                 }
             }
+        }
 
-            Console.WriteLine("\nThank you for using Quantity Measurement Application!");
+        static void RunNTierMenu(QuantityMeasurementController cacheController, QuantityMeasurementController dbController, IQuantityMeasurementRepository dbRepository, Microsoft.Extensions.Logging.ILogger logger)
+        {
+            var cacheRepository = QuantityMeasurementCacheRepository.Instance;
+
+            while (true)
+            {
+                Console.WriteLine("\n╔═════════════════════════════════════════╗");
+                Console.WriteLine("║  UC15/UC16 — N-Tier Architecture Menu   ║");
+                Console.WriteLine("╚═════════════════════════════════════════╝");
+                Console.WriteLine("\n1. Cache Repository");
+                Console.WriteLine("2. Database Repository");
+                Console.WriteLine("3. Back");
+                Console.Write("\nChoice: ");
+
+                string? choice = Console.ReadLine();
+                if (choice == "3") break;
+
+                try
+                {
+                    switch (choice)
+                    {
+                        case "1": RunOperationsMainMenu("Cache (Memory)", cacheController, cacheRepository, logger); break;
+                        case "2": RunOperationsMainMenu("Database", dbController, dbRepository, logger); break;
+                        default: Console.WriteLine("Invalid choice."); break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"✗ Error: {ex.Message}");
+                    logger.LogError($"Operation failed: {ex.Message}");
+                }
+            }
+        }
+
+        static void RunOperationsMainMenu(string storageType, QuantityMeasurementController controller, IQuantityMeasurementRepository? repository, Microsoft.Extensions.Logging.ILogger logger)
+        {
+            bool running = true;
+            while (running)
+            {
+                Console.WriteLine($"\n╔═════════════════════════════════════════════╗");
+                Console.WriteLine($"║   {storageType,40} │");
+                Console.WriteLine("╚═════════════════════════════════════════════╝");
+                Console.WriteLine("\n1. Length");
+                Console.WriteLine("2. Weight");
+                Console.WriteLine("3. Volume");
+                Console.WriteLine("4. Temperature");
+                Console.WriteLine("5. View All Measurements");
+                Console.WriteLine("6. Get Measurement Count");
+                Console.WriteLine("7. Query by Operation Type");
+                Console.WriteLine("8. Clear All Measurements");
+                Console.WriteLine("0. Back");
+                Console.Write("\nChoice: ");
+
+                string? choice = Console.ReadLine();
+
+                if (choice == "0") break;
+
+                try
+                {
+                    switch (choice)
+                    {
+                        case "1": RunOperationsMenu("Length", new[] { "FEET", "INCHES", "YARDS", "CENTIMETERS" }, controller); break;
+                        case "2": RunOperationsMenu("Weight", new[] { "GRAM", "KILOGRAM", "POUND" }, controller); break;
+                        case "3": RunOperationsMenu("Volume", new[] { "MILLILITRE", "LITRE", "GALLON" }, controller); break;
+                        case "4": RunOperationsMenu("Temperature", new[] { "CELSIUS", "FAHRENHEIT", "KELVIN" }, controller); break;
+                        case "5": if (repository != null) DisplayAllMeasurements(repository); break;
+                        case "6": if (repository != null) DisplayMeasurementCount(repository); break;
+                        case "7": if (repository != null) QueryByOperation(repository); break;
+                        case "8": if (repository != null) ClearAllMeasurements(repository); break;
+                        default: Console.WriteLine("Invalid choice."); break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"✗ Error: {ex.Message}");
+                    logger.LogError($"Operation failed: {ex.Message}");
+                }
+            }
         }
 
         static void RunOperationsMenu(string category, string[] units, QuantityMeasurementController controller)
