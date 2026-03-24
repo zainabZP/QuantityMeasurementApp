@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JZl3YKGCdzQ=",
+  "dgSpecHash": "GGZW4MURFtk=",
   "success": true,
-  "projectFilePath": "C:\\QuantityMeasurementApp\\backup\\curr UC16\\QuantityMeasurementAppTests\\QuantityMeasurementAppTests.csproj",
+  "projectFilePath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementAppTests\\QuantityMeasurementAppTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wasee\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\wasee\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
@@ -79,9 +79,9 @@
       "code": "NU1603",
       "level": "Warning",
       "message": "QuantityMeasurementAppTests depends on NUnit3TestAdapter (>= 4.6.1) but NUnit3TestAdapter 4.6.1 was not found. NUnit3TestAdapter 5.0.0 was resolved instead.",
-      "projectPath": "C:\\QuantityMeasurementApp\\backup\\curr UC16\\QuantityMeasurementAppTests\\QuantityMeasurementAppTests.csproj",
+      "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementAppTests\\QuantityMeasurementAppTests.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\QuantityMeasurementApp\\backup\\curr UC16\\QuantityMeasurementAppTests\\QuantityMeasurementAppTests.csproj",
+      "filePath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementAppTests\\QuantityMeasurementAppTests.csproj",
       "libraryId": "NUnit3TestAdapter",
       "targetGraphs": [
         "net10.0"

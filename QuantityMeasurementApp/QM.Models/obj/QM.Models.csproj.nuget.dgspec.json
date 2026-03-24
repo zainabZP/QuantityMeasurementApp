@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\QuantityMeasurementApp\\backup\\curr UC16\\QM.Models\\QM.Models.csproj": {}
+    "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {}
   },
   "projects": {
-    "C:\\QuantityMeasurementApp\\backup\\curr UC16\\QM.Models\\QM.Models.csproj": {
+    "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\QuantityMeasurementApp\\backup\\curr UC16\\QM.Models\\QM.Models.csproj",
+        "projectUniqueName": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj",
         "projectName": "QM.Models",
-        "projectPath": "C:\\QuantityMeasurementApp\\backup\\curr UC16\\QM.Models\\QM.Models.csproj",
+        "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj",
         "packagesPath": "C:\\Users\\wasee\\.nuget\\packages\\",
-        "outputPath": "C:\\QuantityMeasurementApp\\backup\\curr UC16\\QM.Models\\obj\\",
+        "outputPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
