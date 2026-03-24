@@ -14,7 +14,7 @@ namespace QuantityMeasurementApp.Config
         {
             var serviceProvider = ServiceConfig.Configure();
 
-            // ✅ Get logger properly
+            // Get logger properly
             var logger = serviceProvider.GetRequiredService<ILogger<NTierMenu>>();
 
             // DB objects
@@ -32,7 +32,7 @@ namespace QuantityMeasurementApp.Config
                 cacheController,
                 dbController,
                 dbRepository,
-                logger   // ✅ important
+                logger   // 
             );
 
             RunMainMenu(legacyMenu, nTierMenu);
