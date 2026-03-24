@@ -1,0 +1,10 @@
+{
+  "version": "0.1",
+  "projects": [
+    "QM.Models\\QM.Models.csproj",
+    "QM.Repository\\QM.Repository.csproj",
+    "QM.BusinessLogic\\QM.BusinessLogic.csproj",
+    "QuantityMeasurementApp\\QuantityMeasurementApp.csproj",
+    "QuantityMeasurementAppTests\\QuantityMeasurementAppTests.csproj"
+  ]
+}
