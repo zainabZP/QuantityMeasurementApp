@@ -1,0 +1,65 @@
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\bin\Debug\net10.0\QM.Models.deps.json
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\bin\Debug\net10.0\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\bin\Debug\net10.0\QM.Models.pdb
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\QM.Models.csproj.AssemblyReference.cache
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\QM.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfoInputs.cache
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfo.cs
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\QM.Models.csproj.CoreCompileInputs.cache
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\QM.Models.sourcelink.json
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\refint\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\QM.Models.pdb
+C:\QuantityMeasurementApp\backup\UC16\QM.Models\obj\Debug\net10.0\ref\QM.Models.dll
+C:\QuanttityApp\QM.Models\bin\Debug\net10.0\QM.Models.deps.json
+C:\QuanttityApp\QM.Models\bin\Debug\net10.0\QM.Models.dll
+C:\QuanttityApp\QM.Models\bin\Debug\net10.0\QM.Models.pdb
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\QM.Models.csproj.AssemblyReference.cache
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\QM.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfoInputs.cache
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfo.cs
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\QM.Models.csproj.CoreCompileInputs.cache
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\QM.Models.sourcelink.json
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\QM.Models.dll
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\refint\QM.Models.dll
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\QM.Models.pdb
+C:\QuanttityApp\QM.Models\obj\Debug\net10.0\ref\QM.Models.dll
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\bin\Debug\net10.0\QM.Models.deps.json
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\bin\Debug\net10.0\QM.Models.dll
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\bin\Debug\net10.0\QM.Models.pdb
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\QM.Models.csproj.AssemblyReference.cache
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\QM.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfoInputs.cache
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfo.cs
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\QM.Models.csproj.CoreCompileInputs.cache
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\QM.Models.sourcelink.json
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\QM.Models.dll
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\refint\QM.Models.dll
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\QM.Models.pdb
+C:\QuantityMeasurementApp\backup\curr UC16\QM.Models\obj\Debug\net10.0\ref\QM.Models.dll
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\bin\Debug\net10.0\QM.Models.deps.json
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\bin\Debug\net10.0\QM.Models.dll
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\bin\Debug\net10.0\QM.Models.pdb
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\QM.Models.csproj.AssemblyReference.cache
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\QM.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfoInputs.cache
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfo.cs
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\QM.Models.csproj.CoreCompileInputs.cache
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\QM.Models.sourcelink.json
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\QM.Models.dll
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\refint\QM.Models.dll
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\QM.Models.pdb
+C:\QuanttityApp\QuantityMeasurementApp\QM.Models\obj\Debug\net10.0\ref\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\bin\Debug\net10.0\QM.Models.deps.json
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\bin\Debug\net10.0\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\bin\Debug\net10.0\QM.Models.pdb
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\QM.Models.csproj.AssemblyReference.cache
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\QM.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfoInputs.cache
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\QM.Models.AssemblyInfo.cs
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\QM.Models.csproj.CoreCompileInputs.cache
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\QM.Models.sourcelink.json
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\refint\QM.Models.dll
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\QM.Models.pdb
+C:\QuantityMeasurementApp\backup\UC17\QM.Models\obj\Debug\net10.0\ref\QM.Models.dll
