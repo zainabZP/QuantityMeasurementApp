@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QM.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+872bd7e7805841c1a1bee9ea8c0984880232a72f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+055c52ef5c4a530e5ce6ca8860e73c35e063de47")]
 [assembly: System.Reflection.AssemblyProductAttribute("QM.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QM.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

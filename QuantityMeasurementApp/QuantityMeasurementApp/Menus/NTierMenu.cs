@@ -35,6 +35,7 @@ namespace QuantityMeasurementApp.Menus
                 Console.WriteLine("\n╔═════════════════════════════════════════╗");
                 Console.WriteLine("║  UC15/UC16 — N-Tier Architecture Menu   ║");
                 Console.WriteLine("╚═════════════════════════════════════════╝");
+                _logger.LogInformation("Menu started");
                 Console.WriteLine("\n1. Cache Repository");
                 Console.WriteLine("2. Database Repository");
                 Console.WriteLine("3. Back");

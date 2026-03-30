@@ -15,6 +15,17 @@ namespace QuantityMeasurementApp.Config
             var serviceProvider = ServiceConfig.Configure();
 
             // Get logger properly
+            // 1. serviceProvider
+                    // This is an object of IServiceProvider
+                    // It is the Dependency Injection container
+                    // It contains all the services you registered earlier
+            // 2. GetRequiredService<T>() is an extension method of IServiceProvider.
+                    // It is used to fetch a service from the container
+                    // If the service exists → returns it 
+                    // If not → throws exception
+            // 3. ILogger<NTierMenu> - A logger specifically for the NTierMenu class
+            // 4. logger is of type: ILogger<NTierMenu>. hence serviceProvider.GetRequiredService<ILogger<NTierMenu>>(); returns ILogger<NTierMenu> obj.
+            
             var logger = serviceProvider.GetRequiredService<ILogger<NTierMenu>>();
 
             // DB objects

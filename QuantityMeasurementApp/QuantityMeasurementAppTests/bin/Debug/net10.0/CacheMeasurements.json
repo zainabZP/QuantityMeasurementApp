@@ -743,5 +743,154 @@
     "Result": "1 KG (Weight)",
     "HasError": false,
     "Timestamp": "2026-03-24T16:38:31.0084787+05:30"
+  },
+  {
+    "Id": "ae608460-6ad7-4ce4-b42c-34d7234cda58",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.06821+05:30"
+  },
+  {
+    "Id": "4903239a-73ea-4bd7-832c-f235762e555d",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.1493921+05:30"
+  },
+  {
+    "Id": "b3899ada-80e6-4c27-ab56-16cd8eafd7cb",
+    "OperationType": "Add",
+    "Operand1": "1 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "2 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.1783136+05:30"
+  },
+  {
+    "Id": "02ba315d-61cf-49e4-aa6d-60430fbb5cbc",
+    "OperationType": "Compare",
+    "Operand1": "1 CM (Length)",
+    "Operand2": "0.393701 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2041971+05:30"
+  },
+  {
+    "Id": "a9ff07ed-1053-4c16-af3f-bc9a7ea9c661",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2300563+05:30"
+  },
+  {
+    "Id": "e39a99f5-3507-4d23-871f-77ef2c645d7c",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "2 FEET (Length)",
+    "ScalarResult": 0,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2481195+05:30"
+  },
+  {
+    "Id": "dc3cbf94-8165-4a14-b731-6f6e91f8d8b9",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2687935+05:30"
+  },
+  {
+    "Id": "a940124a-3f00-4f75-a988-b7a3232081a1",
+    "OperationType": "Compare",
+    "Operand1": "1 YARD (Length)",
+    "Operand2": "3 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2894325+05:30"
+  },
+  {
+    "Id": "5da16f48-53e9-4a9f-886d-ba7232cc2209",
+    "OperationType": "Convert",
+    "Operand1": "1 FEET (Length)",
+    "Result": "12 INCHES (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.3136755+05:30"
+  },
+  {
+    "Id": "77c1fd87-00da-4e8c-aff9-bff889a26d81",
+    "OperationType": "Convert",
+    "Operand1": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.3367398+05:30"
+  },
+  {
+    "Id": "b897b035-9c09-4603-8512-cc4a633be0fc",
+    "OperationType": "Convert",
+    "Operand1": "1 KG (Weight)",
+    "Result": "1000 GRAM (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.3620563+05:30"
+  },
+  {
+    "Id": "cb30998b-2fd0-4d14-9820-1710858c85b1",
+    "OperationType": "Convert",
+    "Operand1": "1 LITRE (Volume)",
+    "Result": "1000 ML (Volume)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.3948626+05:30"
+  },
+  {
+    "Id": "ad35bef5-5bb4-41b2-bb70-d73cdf2f26e8",
+    "OperationType": "Divide",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.4332897+05:30"
+  },
+  {
+    "Id": "1fddf8d6-ad44-40ae-9670-599dbf465074",
+    "OperationType": "Divide",
+    "Operand1": "24 INCHES (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.4593355+05:30"
+  },
+  {
+    "Id": "2517cb6d-05e0-482a-95ba-0014c77d7531",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.4918551+05:30"
+  },
+  {
+    "Id": "bc18a8a5-09c4-489a-a42c-38fe9ceedb94",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.5290274+05:30"
+  },
+  {
+    "Id": "43d093f5-7c72-4478-8522-b2dde6637f89",
+    "OperationType": "Subtract",
+    "Operand1": "2 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "1 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.5505339+05:30"
   }
 ]
