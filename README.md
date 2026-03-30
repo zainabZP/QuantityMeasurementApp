@@ -1,13 +1,21 @@
-UC17 — Quantity Measurement REST API with N-Tier Architecture & EF Core ORM
+# UC17 — Quantity Measurement REST API
+### N-Tier Architecture & EF Core ORM | .NET 10
 
-Overview
-UC17 is a .NET 10 REST API that exposes Quantity Measurement operations (compare, convert, add, subtract, divide) over HTTP using a clean N-Tier architecture.
-It uses Entity Framework Core with SQL Server for persistence, Serilog for structured logging, Swagger/OpenAPI for interactive documentation, and a global exception handler for consistent error responses. 
-All operations are saved to the database and can be queried by type, measurement category, or error status.
+---
 
+## Overview
+
+UC17 is a **.NET 10 REST API** that exposes Quantity Measurement operations (compare, convert, add, subtract, divide) over HTTP using a clean N-Tier architecture.
+
+It uses **Entity Framework Core** with SQL Server for persistence, **Serilog** for structured logging, **Swagger/OpenAPI** for interactive documentation, and a **global exception handler** for consistent error responses. All operations are saved to the database and can be queried by type, measurement category, or error status.
+
+---
+
+## Solution Structure
+```
 CurrUC17/
 │
-├── QM.Models/                            # Shared models layer
+├── QM.Models/                               # Shared models layer
 │   ├── DTOs/
 │   │   ├── AuthDTOs.cs
 │   │   ├── QuantityDTO.cs
@@ -31,7 +39,7 @@ CurrUC17/
 │   │   └── QuantityWeight.cs
 │   └── QM.Models.csproj
 │
-├── QM.BusinessLogic/                    # Business logic layer
+├── QM.BusinessLogic/                        # Business logic layer
 │   ├── Interface/
 │   │   ├── IMeasurable.cs
 │   │   └── IQuantityMeasurementService.cs
@@ -50,7 +58,7 @@ CurrUC17/
 │   │   └── WeightUnitExtensions.cs
 │   └── QM.BusinessLogic.csproj
 │
-├── QM.Repository/                        # Data access layer
+├── QM.Repository/                           # Data access layer
 │   ├── Data/
 │   │   └── QuantityMeasurementDbContext.cs
 │   ├── Interface/
@@ -60,7 +68,7 @@ CurrUC17/
 │   │   └── QuantityMeasurementDatabaseRepository.cs
 │   └── QM.Repository.csproj
 │
-├── QuantityMeasurementApi/               # Web API layer
+├── QuantityMeasurementApi/                  # Web API layer
 │   ├── Config/
 │   │   └── ApiHost.cs
 │   ├── Controllers/
@@ -77,7 +85,7 @@ CurrUC17/
 │   ├── Program.cs
 │   └── QuantityMeasurementApi.csproj
 │
-├── QuantityMeasurementApp/               # Console app layer
+├── QuantityMeasurementApp/                  # Console app layer
 │   ├── Config/
 │   │   ├── loggerConfig.cs
 │   │   └── serviceConfig.cs
@@ -91,7 +99,7 @@ CurrUC17/
 │   ├── Program.cs
 │   └── QuantityMeasurementApp.csproj
 │
-├── QuantityMeasurementAppTests/          # Test project
+├── QuantityMeasurementAppTests/             # Test project
 │   ├── Integration/
 │   │   └── QuantityMeasurementIntegrationTests.cs
 │   ├── Repository/
@@ -114,24 +122,35 @@ CurrUC17/
 │   └── QuantityMeasurementAppTests.csproj
 │
 └── QuantityMeasurementApp.slnx
+```
 
-Project Descriptions
-QM.Models — Shared library containing all DTOs, entities, enums, exceptions, and domain models used across all layers.
-QM.BusinessLogic — Core business logic for all quantity measurement operations including length, weight, volume, and temperature conversions. Contains service interfaces and implementations.
-QM.Repository — Data access layer with EF Core DbContext, repository interface, and two implementations — database repository (SQL Server) and cache repository (JSON file).
-QuantityMeasurementApi — ASP.NET Core Web API exposing all measurement operations as REST endpoints. Includes Swagger UI, global exception handling, Serilog logging, and auto-migration on startup.
-QuantityMeasurementApp — Console application providing a menu-driven interface to interact with the measurement service directly (legacy and N-Tier modes).
-QuantityMeasurementAppTests — NUnit test project covering all use cases from UC3 to UC17 including unit tests, repository tests, service tests, and integration tests.
+---
 
-QuantityMeasurementApi  (HTTP Layer)
-        │
-        ▼
-QM.BusinessLogic  (Service Layer)
-        │
-        ▼
-QM.Repository  (Data Access Layer)
-        │
-        ▼
+## Project Descriptions
+
+| Project | Role |
+|---|---|
+| `QM.Models` | Shared library containing all DTOs, entities, enums, exceptions, and domain models used across all layers |
+| `QM.BusinessLogic` | Core business logic for all quantity measurement operations including length, weight, volume, and temperature conversions |
+| `QM.Repository` | Data access layer with EF Core DbContext, repository interface, and two implementations — database (SQL Server) and cache (JSON file) |
+| `QuantityMeasurementApi` | ASP.NET Core Web API exposing all measurement operations as REST endpoints with Swagger UI, global exception handling, and Serilog logging |
+| `QuantityMeasurementApp` | Console application providing a menu-driven interface in both legacy and N-Tier modes |
+| `QuantityMeasurementAppTests` | NUnit test project covering all use cases from UC3 to UC17 including unit, repository, service, and integration tests |
+
+---
+
+## Architecture
+```
+QuantityMeasurementApi       (HTTP / Presentation Layer)
+          │
+          ▼
+QM.BusinessLogic             (Service / Business Logic Layer)
+          │
+          ▼
+QM.Repository                (Data Access Layer)
+          │
+          ▼
 SQL Server — QuantityMeasurementDb2
+```
 
-The API layer depends on BusinessLogic and Repository via interfaces, keeping all layers loosely coupled. The console app (QuantityMeasurementApp) also depends on BusinessLogic and Repository directly.
+> The API layer depends on BusinessLogic and Repository via **interfaces**, keeping all layers loosely coupled. The console app (`QuantityMeasurementApp`) also depends on BusinessLogic and Repository directly.
