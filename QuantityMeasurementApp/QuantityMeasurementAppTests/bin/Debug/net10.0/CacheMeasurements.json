@@ -1,0 +1,896 @@
+[
+  {
+    "Id": "29336859-320f-47bd-b11a-3097aec56528",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.6175137+05:30"
+  },
+  {
+    "Id": "6937b591-26cb-41dc-86e3-7b64987a854b",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.6637886+05:30"
+  },
+  {
+    "Id": "326660b8-43e0-4981-bf8c-a290e2e97e25",
+    "OperationType": "Add",
+    "Operand1": "1 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "2 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.697232+05:30"
+  },
+  {
+    "Id": "8c778783-86f3-4a65-b878-919fc793e279",
+    "OperationType": "Compare",
+    "Operand1": "1 CM (Length)",
+    "Operand2": "0.393701 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.7230447+05:30"
+  },
+  {
+    "Id": "b9fe1563-d21b-43a2-be05-0d1510bdc9d8",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.74657+05:30"
+  },
+  {
+    "Id": "6bb9d2f8-2858-4efb-9f82-5083e0c51d56",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "2 FEET (Length)",
+    "ScalarResult": 0,
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.7731176+05:30"
+  },
+  {
+    "Id": "9bdb5a6e-5539-484d-8a0b-4f3650d647c2",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.7966795+05:30"
+  },
+  {
+    "Id": "ceb5edc2-4cd8-4070-8197-07adb321f737",
+    "OperationType": "Compare",
+    "Operand1": "1 YARD (Length)",
+    "Operand2": "3 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.8209836+05:30"
+  },
+  {
+    "Id": "5db3b112-286a-45d7-9447-4fa6b2d99cbd",
+    "OperationType": "Convert",
+    "Operand1": "1 FEET (Length)",
+    "Result": "12 INCHES (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.8477058+05:30"
+  },
+  {
+    "Id": "43c4d590-b776-4cd8-88b5-4c6c2314cb07",
+    "OperationType": "Convert",
+    "Operand1": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.8701782+05:30"
+  },
+  {
+    "Id": "1c83aff4-10e7-4bd7-b1d6-6206bfd91389",
+    "OperationType": "Convert",
+    "Operand1": "1 KG (Weight)",
+    "Result": "1000 GRAM (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.9068289+05:30"
+  },
+  {
+    "Id": "9927b669-2365-4a9d-a9b7-a0a06f0d2700",
+    "OperationType": "Convert",
+    "Operand1": "1 LITRE (Volume)",
+    "Result": "1000 ML (Volume)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.9393214+05:30"
+  },
+  {
+    "Id": "5f358aef-06ff-48df-8a53-1b0d2dd97af5",
+    "OperationType": "Divide",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.9673208+05:30"
+  },
+  {
+    "Id": "5c4a2797-f24c-47d0-910b-5d1b10557a7a",
+    "OperationType": "Divide",
+    "Operand1": "24 INCHES (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:32.9856025+05:30"
+  },
+  {
+    "Id": "b65a8d22-5fde-451c-be2f-6eb2ad6958d5",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:33.0139889+05:30"
+  },
+  {
+    "Id": "8fdcc300-9796-4883-a394-f85915512147",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:33.0459719+05:30"
+  },
+  {
+    "Id": "a8d8f29d-717f-429b-82c6-212e9d0df84e",
+    "OperationType": "Subtract",
+    "Operand1": "2 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "1 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T11:58:33.0769275+05:30"
+  },
+  {
+    "Id": "6c5a35bb-40e3-4aeb-ab60-1ef13f7f77ec",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.1204681+05:30"
+  },
+  {
+    "Id": "e48f123d-3e68-4382-9a92-406cfe8cf2dc",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.2025292+05:30"
+  },
+  {
+    "Id": "c829117b-e215-483d-bf9e-66b347d06b8b",
+    "OperationType": "Add",
+    "Operand1": "1 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "2 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.2317405+05:30"
+  },
+  {
+    "Id": "f5606047-bf32-4769-a7d5-cee48e81c1ab",
+    "OperationType": "Compare",
+    "Operand1": "1 CM (Length)",
+    "Operand2": "0.393701 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.2621166+05:30"
+  },
+  {
+    "Id": "ff2dde36-839f-4f50-ad01-de542d710c4b",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.2876083+05:30"
+  },
+  {
+    "Id": "bffa78fd-4a05-436b-a60e-ff0c634c4c0e",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "2 FEET (Length)",
+    "ScalarResult": 0,
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.3136969+05:30"
+  },
+  {
+    "Id": "2ed61a74-0d20-4d8a-8feb-bb56b1cf82d1",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.3389444+05:30"
+  },
+  {
+    "Id": "75323e01-d716-4e91-a57f-95c6bd5c217f",
+    "OperationType": "Compare",
+    "Operand1": "1 YARD (Length)",
+    "Operand2": "3 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.3669574+05:30"
+  },
+  {
+    "Id": "5fd1a5cd-a5a7-4ff4-83af-18312ebf8b1b",
+    "OperationType": "Convert",
+    "Operand1": "1 FEET (Length)",
+    "Result": "12 INCHES (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.3944826+05:30"
+  },
+  {
+    "Id": "77346075-72d6-4f49-9f09-d4020b45c98e",
+    "OperationType": "Convert",
+    "Operand1": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.4162728+05:30"
+  },
+  {
+    "Id": "fc5d0380-47f6-47cc-a898-d62b620cd534",
+    "OperationType": "Convert",
+    "Operand1": "1 KG (Weight)",
+    "Result": "1000 GRAM (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.4465919+05:30"
+  },
+  {
+    "Id": "98e8b522-3d32-46c2-823a-36477c9d3abf",
+    "OperationType": "Convert",
+    "Operand1": "1 LITRE (Volume)",
+    "Result": "1000 ML (Volume)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.4774175+05:30"
+  },
+  {
+    "Id": "10177092-721b-4612-ae14-280050ea1f41",
+    "OperationType": "Divide",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.511714+05:30"
+  },
+  {
+    "Id": "027446da-d2cd-47e9-bef4-7d54515d251c",
+    "OperationType": "Divide",
+    "Operand1": "24 INCHES (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.5478942+05:30"
+  },
+  {
+    "Id": "b9dab1da-b53c-43f7-8f5a-6486ffe9ccea",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.5715444+05:30"
+  },
+  {
+    "Id": "aabb9e66-eaff-4a29-8841-21f99aefb2cd",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.6016613+05:30"
+  },
+  {
+    "Id": "0c0e1e42-b9d3-43d0-ade4-2ae7bf0923f5",
+    "OperationType": "Subtract",
+    "Operand1": "2 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "1 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T12:20:33.6237646+05:30"
+  },
+  {
+    "Id": "57321d04-d43b-43b9-9624-baa8d2855a75",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.2372909+05:30"
+  },
+  {
+    "Id": "844643aa-f03c-4adc-ad94-6aa5a470cb4c",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.345742+05:30"
+  },
+  {
+    "Id": "c0eea972-f11e-4eb7-bc6c-5d870d4c7eca",
+    "OperationType": "Add",
+    "Operand1": "1 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "2 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.3721374+05:30"
+  },
+  {
+    "Id": "8f955437-8062-46ba-96c5-681ed6e8f9ab",
+    "OperationType": "Compare",
+    "Operand1": "1 CM (Length)",
+    "Operand2": "0.393701 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.3969341+05:30"
+  },
+  {
+    "Id": "bf37f986-dde1-4bbf-bb30-76bcfd2ea23b",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.4238496+05:30"
+  },
+  {
+    "Id": "c47affc5-18bd-4c15-ba6c-8bd83ff3381f",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "2 FEET (Length)",
+    "ScalarResult": 0,
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.4507129+05:30"
+  },
+  {
+    "Id": "c0b93466-702e-47e2-a29d-bdf6a1459767",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.4751202+05:30"
+  },
+  {
+    "Id": "b5835079-2993-4985-9096-c564e72637c9",
+    "OperationType": "Compare",
+    "Operand1": "1 YARD (Length)",
+    "Operand2": "3 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.4988324+05:30"
+  },
+  {
+    "Id": "2a049791-0f69-4a67-9b11-0c43e8efcd9e",
+    "OperationType": "Convert",
+    "Operand1": "1 FEET (Length)",
+    "Result": "12 INCHES (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.5258921+05:30"
+  },
+  {
+    "Id": "1905ec6d-782d-492f-b468-a33347f2d41e",
+    "OperationType": "Convert",
+    "Operand1": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.5518607+05:30"
+  },
+  {
+    "Id": "26586fb1-282f-409b-8485-7ec4dd85a631",
+    "OperationType": "Convert",
+    "Operand1": "1 KG (Weight)",
+    "Result": "1000 GRAM (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.5775843+05:30"
+  },
+  {
+    "Id": "4bb466b8-55ac-4c88-b689-4a05627e1a58",
+    "OperationType": "Convert",
+    "Operand1": "1 LITRE (Volume)",
+    "Result": "1000 ML (Volume)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.604796+05:30"
+  },
+  {
+    "Id": "9bf1761a-c8ec-4deb-9770-388196d98d97",
+    "OperationType": "Divide",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.6352162+05:30"
+  },
+  {
+    "Id": "77c016bb-b054-4993-a686-f730bc62ad2e",
+    "OperationType": "Divide",
+    "Operand1": "24 INCHES (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.6629316+05:30"
+  },
+  {
+    "Id": "ade43f9f-d237-4d3a-b1b3-b4c3865c078b",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.6907035+05:30"
+  },
+  {
+    "Id": "4590f605-1a05-4646-b8a5-0fe3f3b947b0",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.7174341+05:30"
+  },
+  {
+    "Id": "4a6d97d4-69f6-40f1-ab53-4431f00adf6a",
+    "OperationType": "Subtract",
+    "Operand1": "2 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "1 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T13:07:40.740979+05:30"
+  },
+  {
+    "Id": "d87f1b24-e1fd-47df-ae51-aeb50ee15c4d",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.5058763+05:30"
+  },
+  {
+    "Id": "209d47c1-8493-4de9-95dd-3c15ec903c05",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.7104502+05:30"
+  },
+  {
+    "Id": "63fd1302-5d46-41d7-9427-a189f11a94f1",
+    "OperationType": "Add",
+    "Operand1": "1 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "2 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.7424364+05:30"
+  },
+  {
+    "Id": "97ff8e57-ddda-4d9d-8496-da96785c2875",
+    "OperationType": "Compare",
+    "Operand1": "1 CM (Length)",
+    "Operand2": "0.393701 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.7728222+05:30"
+  },
+  {
+    "Id": "cb9fd67f-1fd2-41d4-9fd5-8e08cdbe4a9c",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.7995859+05:30"
+  },
+  {
+    "Id": "9f4f84a7-0514-4c33-b928-2420126e7654",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "2 FEET (Length)",
+    "ScalarResult": 0,
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.830557+05:30"
+  },
+  {
+    "Id": "849b28bb-a79d-4f0b-9e02-f463e390c5f1",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.8595867+05:30"
+  },
+  {
+    "Id": "30bbbbcc-ca8a-49d1-a4de-e1f7f9b3e86c",
+    "OperationType": "Compare",
+    "Operand1": "1 YARD (Length)",
+    "Operand2": "3 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.8882257+05:30"
+  },
+  {
+    "Id": "aaf73f03-4fd4-445d-8f9d-a21bbb3cce28",
+    "OperationType": "Convert",
+    "Operand1": "1 FEET (Length)",
+    "Result": "12 INCHES (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.9158112+05:30"
+  },
+  {
+    "Id": "25bd1cd1-e7e8-4929-b6b3-bb8a5cbf7c75",
+    "OperationType": "Convert",
+    "Operand1": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.9454855+05:30"
+  },
+  {
+    "Id": "33c26db5-7748-44bd-9a18-42978bcbb318",
+    "OperationType": "Convert",
+    "Operand1": "1 KG (Weight)",
+    "Result": "1000 GRAM (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:47.9735487+05:30"
+  },
+  {
+    "Id": "b13486d3-b003-4a55-b3dc-5ea92b18f82a",
+    "OperationType": "Convert",
+    "Operand1": "1 LITRE (Volume)",
+    "Result": "1000 ML (Volume)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:48.0041369+05:30"
+  },
+  {
+    "Id": "977f0706-b99e-49b2-a0b6-94d492f2d5f0",
+    "OperationType": "Divide",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:48.0399555+05:30"
+  },
+  {
+    "Id": "4cf6f475-c8f5-4e14-97ca-ab77cf7fe129",
+    "OperationType": "Divide",
+    "Operand1": "24 INCHES (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:48.0702332+05:30"
+  },
+  {
+    "Id": "369476db-e7cc-4c15-b350-d938ea8aa0ed",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:48.0988958+05:30"
+  },
+  {
+    "Id": "f15a4daa-5c5b-4ffc-a44e-6dd3b1af9eba",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:48.1259798+05:30"
+  },
+  {
+    "Id": "d81a1200-eba5-4f57-9350-04c6a4abc19a",
+    "OperationType": "Subtract",
+    "Operand1": "2 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "1 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T15:10:48.1530181+05:30"
+  },
+  {
+    "Id": "82f817bf-3b1a-46b3-9ebd-cd4895969db6",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.5077582+05:30"
+  },
+  {
+    "Id": "f1a414aa-6bea-4ba3-8771-a6fe909365f4",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.5976239+05:30"
+  },
+  {
+    "Id": "8cf18455-8dc3-47a0-b615-350330efc184",
+    "OperationType": "Add",
+    "Operand1": "1 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "2 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.6241727+05:30"
+  },
+  {
+    "Id": "dcf9cf10-fbbe-4164-b445-c4b512c0e45e",
+    "OperationType": "Compare",
+    "Operand1": "1 CM (Length)",
+    "Operand2": "0.393701 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.6514989+05:30"
+  },
+  {
+    "Id": "25b8c407-8e46-4ce1-87db-21f6ab6eedbc",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.6761132+05:30"
+  },
+  {
+    "Id": "13652181-36c2-4127-a409-1a1d06cd28fe",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "2 FEET (Length)",
+    "ScalarResult": 0,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.7035308+05:30"
+  },
+  {
+    "Id": "fde782de-da6b-4517-b65c-f8a3469c94bc",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.7319971+05:30"
+  },
+  {
+    "Id": "44e117f1-26b7-4bd1-8aec-530191a1f50c",
+    "OperationType": "Compare",
+    "Operand1": "1 YARD (Length)",
+    "Operand2": "3 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.7566391+05:30"
+  },
+  {
+    "Id": "acbec43a-648b-48fe-ae64-4c6a0cfd944a",
+    "OperationType": "Convert",
+    "Operand1": "1 FEET (Length)",
+    "Result": "12 INCHES (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.7835685+05:30"
+  },
+  {
+    "Id": "a8021178-646f-43ed-be7a-78c781895de0",
+    "OperationType": "Convert",
+    "Operand1": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.8097557+05:30"
+  },
+  {
+    "Id": "6516e427-2c15-447c-b42a-ec019a7d9381",
+    "OperationType": "Convert",
+    "Operand1": "1 KG (Weight)",
+    "Result": "1000 GRAM (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.8386914+05:30"
+  },
+  {
+    "Id": "011d46d6-fb26-4f88-9fe8-f69f08262d38",
+    "OperationType": "Convert",
+    "Operand1": "1 LITRE (Volume)",
+    "Result": "1000 ML (Volume)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.8667368+05:30"
+  },
+  {
+    "Id": "c94ae3e7-03f1-4963-989b-17458bbfaeaf",
+    "OperationType": "Divide",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.9016867+05:30"
+  },
+  {
+    "Id": "16b06db0-39b0-421d-b951-161068af2616",
+    "OperationType": "Divide",
+    "Operand1": "24 INCHES (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.9321781+05:30"
+  },
+  {
+    "Id": "af077cd3-0bbe-40d6-a061-a1ee87ef2e5a",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.9591809+05:30"
+  },
+  {
+    "Id": "0d5c2755-d131-4036-b240-cde5bd820b82",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:30.9831986+05:30"
+  },
+  {
+    "Id": "1351e61d-a59e-4408-9d2f-52cba33b2e03",
+    "OperationType": "Subtract",
+    "Operand1": "2 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "1 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:38:31.0084787+05:30"
+  },
+  {
+    "Id": "ae608460-6ad7-4ce4-b42c-34d7234cda58",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.06821+05:30"
+  },
+  {
+    "Id": "4903239a-73ea-4bd7-832c-f235762e555d",
+    "OperationType": "Add",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "2 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.1493921+05:30"
+  },
+  {
+    "Id": "b3899ada-80e6-4c27-ab56-16cd8eafd7cb",
+    "OperationType": "Add",
+    "Operand1": "1 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "2 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.1783136+05:30"
+  },
+  {
+    "Id": "02ba315d-61cf-49e4-aa6d-60430fbb5cbc",
+    "OperationType": "Compare",
+    "Operand1": "1 CM (Length)",
+    "Operand2": "0.393701 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2041971+05:30"
+  },
+  {
+    "Id": "a9ff07ed-1053-4c16-af3f-bc9a7ea9c661",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2300563+05:30"
+  },
+  {
+    "Id": "e39a99f5-3507-4d23-871f-77ef2c645d7c",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "2 FEET (Length)",
+    "ScalarResult": 0,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2481195+05:30"
+  },
+  {
+    "Id": "dc3cbf94-8165-4a14-b731-6f6e91f8d8b9",
+    "OperationType": "Compare",
+    "Operand1": "1 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2687935+05:30"
+  },
+  {
+    "Id": "a940124a-3f00-4f75-a988-b7a3232081a1",
+    "OperationType": "Compare",
+    "Operand1": "1 YARD (Length)",
+    "Operand2": "3 FEET (Length)",
+    "ScalarResult": 1,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.2894325+05:30"
+  },
+  {
+    "Id": "5da16f48-53e9-4a9f-886d-ba7232cc2209",
+    "OperationType": "Convert",
+    "Operand1": "1 FEET (Length)",
+    "Result": "12 INCHES (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.3136755+05:30"
+  },
+  {
+    "Id": "77c1fd87-00da-4e8c-aff9-bff889a26d81",
+    "OperationType": "Convert",
+    "Operand1": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.3367398+05:30"
+  },
+  {
+    "Id": "b897b035-9c09-4603-8512-cc4a633be0fc",
+    "OperationType": "Convert",
+    "Operand1": "1 KG (Weight)",
+    "Result": "1000 GRAM (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.3620563+05:30"
+  },
+  {
+    "Id": "cb30998b-2fd0-4d14-9820-1710858c85b1",
+    "OperationType": "Convert",
+    "Operand1": "1 LITRE (Volume)",
+    "Result": "1000 ML (Volume)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.3948626+05:30"
+  },
+  {
+    "Id": "ad35bef5-5bb4-41b2-bb70-d73cdf2f26e8",
+    "OperationType": "Divide",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.4332897+05:30"
+  },
+  {
+    "Id": "1fddf8d6-ad44-40ae-9670-599dbf465074",
+    "OperationType": "Divide",
+    "Operand1": "24 INCHES (Length)",
+    "Operand2": "1 FEET (Length)",
+    "ScalarResult": 2,
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.4593355+05:30"
+  },
+  {
+    "Id": "2517cb6d-05e0-482a-95ba-0014c77d7531",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "1 FEET (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.4918551+05:30"
+  },
+  {
+    "Id": "bc18a8a5-09c4-489a-a42c-38fe9ceedb94",
+    "OperationType": "Subtract",
+    "Operand1": "2 FEET (Length)",
+    "Operand2": "12 INCHES (Length)",
+    "Result": "1 FEET (Length)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.5290274+05:30"
+  },
+  {
+    "Id": "43d093f5-7c72-4478-8522-b2dde6637f89",
+    "OperationType": "Subtract",
+    "Operand1": "2 KG (Weight)",
+    "Operand2": "1000 GRAM (Weight)",
+    "Result": "1 KG (Weight)",
+    "HasError": false,
+    "Timestamp": "2026-03-24T16:46:24.5505339+05:30"
+  }
+]
