@@ -3,22 +3,11 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 
 WORKDIR /src
 
-# Copy the solution and project files from QuantityMeasurementApp folder
-COPY ["QuantityMeasurementApp/QuantityMeasurementApp.slnx", "."]
-COPY ["QuantityMeasurementApp/QM.BusinessLogic/QM.BusinessLogic.csproj", "QM.BusinessLogic/"]
-COPY ["QuantityMeasurementApp/QM.Models/QM.Models.csproj", "QM.Models/"]
-COPY ["QuantityMeasurementApp/QM.Repository/QM.Repository.csproj", "QM.Repository/"]
-COPY ["QuantityMeasurementApp/QuantityMeasurementApi/QuantityMeasurementApi.csproj", "QuantityMeasurementApi/"]
-
-# Update project file to use PostgreSQL
-RUN sed -i 's/<PackageReference Include="Microsoft\.EntityFrameworkCore\.SqlServer"/<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL"/g' QM.Repository/QM.Repository.csproj && \
-    sed -i 's/<PackageReference Include="Microsoft\.EntityFrameworkCore\.Sqlite"/<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL"/g' QuantityMeasurementApi/QuantityMeasurementApi.csproj
+# Copy entire QuantityMeasurementApp folder (contains all projects and solution file)
+COPY QuantityMeasurementApp/ .
 
 # Restore dependencies
 RUN dotnet restore "QuantityMeasurementApp.slnx"
-
-# Copy the entire source from QuantityMeasurementApp folder
-COPY QuantityMeasurementApp/ .
 
 # Build the project
 RUN dotnet build -c Release -o /app/build "QuantityMeasurementApp.slnx"
