@@ -25,9 +25,13 @@ public class Program
         builder.Host.UseSerilog();
 
         // ── Database ──────────────────────────────────────────────────────────
+        var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL")
+            ?? builder.Configuration.GetConnectionString("DefaultConnection")
+            ?? throw new InvalidOperationException("Database connection string is not configured.");
+
         builder.Services.AddDbContext<QuantityMeasurementDbContext>(options =>
             options.UseNpgsql(
-                builder.Configuration.GetConnectionString("DefaultConnection"),
+                connectionString,
                 b => b.MigrationsAssembly("QM.Repository")));
 
         // ── JWT Authentication ────────────────────────────────────────────────
