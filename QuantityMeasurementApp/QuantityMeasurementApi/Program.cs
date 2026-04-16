@@ -26,7 +26,7 @@ public class Program
 
         // ── Database ──────────────────────────────────────────────────────────
         builder.Services.AddDbContext<QuantityMeasurementDbContext>(options =>
-            options.UseSqlServer(
+            options.UseNpgsql(
                 builder.Configuration.GetConnectionString("DefaultConnection"),
                 b => b.MigrationsAssembly("QM.Repository")));
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zd1iSbrZM14=",
+  "dgSpecHash": "rRLD87xpZnQ=",
   "success": true,
-  "projectFilePath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj",
+  "projectFilePath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wasee\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.0\\microsoft.entityframeworkcore.10.0.0.nupkg.sha512",
     "C:\\Users\\wasee\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\10.0.0\\microsoft.entityframeworkcore.abstractions.10.0.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\QuantityMeasurementApi.csproj": {}
+    "C:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\QuantityMeasurementApi.csproj": {}
   },
   "projects": {
-    "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj": {
+    "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj",
+        "projectUniqueName": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj",
         "projectName": "QM.BusinessLogic",
-        "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj",
+        "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\wasee\\.nuget\\packages\\",
-        "outputPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\obj\\",
+        "outputPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {
-                "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj"
+              "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {
+                "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj"
               },
-              "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj": {
-                "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj"
+              "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj": {
+                "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj"
               }
             }
           }
@@ -380,14 +380,14 @@
         }
       }
     },
-    "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {
+    "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj",
+        "projectUniqueName": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj",
         "projectName": "QM.Models",
-        "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj",
+        "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj",
         "packagesPath": "C:\\Users\\wasee\\.nuget\\packages\\",
-        "outputPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\obj\\",
+        "outputPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -729,14 +729,14 @@
         }
       }
     },
-    "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj": {
+    "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj",
+        "projectUniqueName": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj",
         "projectName": "QM.Repository",
-        "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj",
+        "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj",
         "packagesPath": "C:\\Users\\wasee\\.nuget\\packages\\",
-        "outputPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\obj\\",
+        "outputPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -757,8 +757,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {
-                "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj"
+              "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {
+                "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj"
               }
             }
           }
@@ -789,10 +789,6 @@
               "target": "Package",
               "version": "[10.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[10.0.0, )"
-            },
             "Microsoft.Extensions.Caching.Abstractions": {
               "target": "Package",
               "version": "[10.0.0, )"
@@ -802,6 +798,10 @@
               "version": "[10.0.0, )"
             },
             "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[10.0.0, )"
             }
@@ -1100,14 +1100,14 @@
         }
       }
     },
-    "c:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\QuantityMeasurementApi.csproj": {
+    "C:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\QuantityMeasurementApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\QuantityMeasurementApi.csproj",
+        "projectUniqueName": "C:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\QuantityMeasurementApi.csproj",
         "projectName": "QuantityMeasurementApi",
-        "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\QuantityMeasurementApi.csproj",
+        "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\QuantityMeasurementApi.csproj",
         "packagesPath": "C:\\Users\\wasee\\.nuget\\packages\\",
-        "outputPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\obj\\",
+        "outputPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QuantityMeasurementApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1128,14 +1128,14 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj": {
-                "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj"
+              "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj": {
+                "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.BusinessLogic\\QM.BusinessLogic.csproj"
               },
-              "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {
-                "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj"
+              "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj": {
+                "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Models\\QM.Models.csproj"
               },
-              "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj": {
-                "projectPath": "c:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj"
+              "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj": {
+                "projectPath": "C:\\QuanttityApp\\QuantityMeasurementApp\\QM.Repository\\QM.Repository.csproj"
               }
             }
           }
@@ -1172,15 +1172,11 @@
               "target": "Package",
               "version": "[10.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[10.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[10.0.0, )"
-            },
             "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[10.0.0, )"
             },

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QM.BusinessLogic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c71ad0dc1d81f29c11110a6e3f40fbaa5c8778ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97513a92dbdfac9391ddd120dbedc8f89bb9bcf4")]
 [assembly: System.Reflection.AssemblyProductAttribute("QM.BusinessLogic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QM.BusinessLogic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
