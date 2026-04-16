@@ -196,6 +196,8 @@ await app.RunAsync();
 CREATE DATABASE "QuantityMeasurementDb";
 ```
 
+**Note**: For Render PostgreSQL, use a username other than `postgres` (e.g., `quantityapp`, `appuser`, etc.) - Render doesn't allow `postgres` as a username.
+
 ### Run Migrations
 ```bash
 dotnet ef database update --project QM.Repository

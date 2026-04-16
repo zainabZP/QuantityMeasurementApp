@@ -14,10 +14,12 @@
 ### Option A: Install PostgreSQL Directly
 1. Download from: https://www.postgresql.org/download/
 2. Install with default settings
-3. Username: `postgres`
+3. Username: `postgres` (local) or `quantityapp` (for Render)
 4. Password: `postgres` (or what you choose)
 5. Port: `5432`
 6. Create database: Open pgAdmin and create a database named `QuantityMeasurementDb`
+
+**Note for Render users**: When creating a database on Render, use a different username like `quantityapp` instead of `postgres`
 
 ### Option B: Use Docker (Easier)
 ```powershell
@@ -145,12 +147,12 @@ To https://github.com/zainabZP/QuantityMeasurementApp.git
 4. Configure:
    - **Name**: `quantity-measurement-db`
    - **Database**: `quantity_measurement_app`
-   - **User**: `postgres`
+   - **User**: `quantityapp` (⭐ NOT 'postgres' - Render doesn't allow it)
    - **Region**: Choose closest to your users
    - **Plan**: Standard (or Free for testing)
 5. Click **Create Database**
 6. Wait 5-10 minutes for database to initialize
-7. Copy the **Internal Database URL** (looks like: `postgresql://postgres:xxxxx@dpg-xxxxx.render.internal:5432/quantity_measurement_app`)
+7. Copy the **Internal Database URL** (looks like: `postgresql://quantityapp:xxxxx@dpg-xxxxx.render.internal:5432/quantity_measurement_app`)
 
 ### 9.2: Create Web Service (API)
 
@@ -175,7 +177,7 @@ To https://github.com/zainabZP/QuantityMeasurementApp.git
 3. Add these variables:
 
 ```
-DATABASE_URL = postgresql://postgres:PASSWORD@HOST:5432/quantity_measurement_app
+DATABASE_URL = postgresql://quantityapp:PASSWORD@HOST:5432/quantity_measurement_app
 ASPNETCORE_ENVIRONMENT = Production
 Jwt__Key = YourSuperSecretKeyAtLeast32CharsLong!YourSuperSecretKeyAtLeast32CharsLong!
 Jwt__Issuer = QuantityMeasurementApi

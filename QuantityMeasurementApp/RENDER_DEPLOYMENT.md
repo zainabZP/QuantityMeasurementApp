@@ -26,6 +26,8 @@ After creating your PostgreSQL database:
    postgresql://<username>:<password>@<hostname>:<port>/<database>
    ```
 
+⚠️ **Important for Render**: When creating a PostgreSQL database, do NOT use `postgres` as the username. Use `quantityapp` or another name instead.
+
 ### Step 2: Prepare Redis (Optional)
 If you need Redis caching:
 - Use **Redis Cloud** (free tier available)
