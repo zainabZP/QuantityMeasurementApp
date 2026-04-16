@@ -10,6 +10,7 @@ using QM.Repository.Data;
 using QM.Repository.Interface;
 using QM.Repository.Repository;
 using QuantityMeasurementApi.Middleware;
+using Npgsql;
 
 namespace QuantityMeasurementApi;
 
@@ -155,27 +156,48 @@ public class Program
 
     private static string GetConnectionString(IConfiguration configuration)
     {
+        // 1. Try to get FROM environment variable directly (highest priority)
         var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+        
+        // 2. If not found, try from configuration (will pick up substituted ${DATABASE_URL} from render.yaml)
         if (string.IsNullOrEmpty(databaseUrl))
         {
-            return configuration.GetConnectionString("DefaultConnection") 
-                ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            databaseUrl = configuration.GetConnectionString("DefaultConnection");
         }
 
+        if (string.IsNullOrEmpty(databaseUrl))
+        {
+            throw new InvalidOperationException("Database connection string not found in DATABASE_URL or ConnectionStrings:DefaultConnection.");
+        }
+
+        // 3. Handle URI format (postgresql://...)
         if (databaseUrl.StartsWith("postgres://") || databaseUrl.StartsWith("postgresql://"))
         {
             var databaseUri = new Uri(databaseUrl);
             var userInfo = databaseUri.UserInfo.Split(':');
 
-            return $"Host={databaseUri.Host};" +
-                   $"Port={databaseUri.Port};" +
-                   $"Database={databaseUri.AbsolutePath.TrimStart('/')};" +
-                   $"Username={userInfo[0]};" +
-                   $"Password={userInfo[1]};" +
-                   $"SSL Mode=Require;" +
-                   $"Trust Server Certificate=true;";
+            var builder = new NpgsqlConnectionStringBuilder
+            {
+                Host     = databaseUri.Host,
+                Port     = databaseUri.Port == -1 ? 5432 : databaseUri.Port,
+                Database = databaseUri.AbsolutePath.TrimStart('/'),
+                Username = userInfo[0],
+                Password = userInfo.Length > 1 ? userInfo[1] : string.Empty,
+                SslMode  = SslMode.Require,
+                TrustServerCertificate = true,
+                Timeout = 15 // Connection timeout 15s
+            };
+
+            var cs = builder.ToString();
+            
+            // Log masked connection string for debugging
+            Log.Information("Configuring database: Host={Host}, Port={Port}, Database={Database}, User={User}, SSL=Require", 
+                builder.Host, builder.Port, builder.Database, builder.Username);
+                
+            return cs;
         }
 
+        // 4. Return as is if already in standard format
         return databaseUrl;
     }
 }
