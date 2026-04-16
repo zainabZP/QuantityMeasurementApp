@@ -3,14 +3,12 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 
 WORKDIR /src
 
-# Copy entire QuantityMeasurementApp folder (contains all projects and solution file)
+# Copy entire QuantityMeasurementApp folder
 COPY QuantityMeasurementApp/ .
 
-# Restore dependencies
-RUN dotnet restore "QuantityMeasurementApp.slnx"
-
-# Build the project
-RUN dotnet build -c Release -o /app/build "QuantityMeasurementApp.slnx"
+# Restore and build the API project directly (skip solution file)
+RUN dotnet restore "QuantityMeasurementApi/QuantityMeasurementApi.csproj"
+RUN dotnet build -c Release -o /app/build "QuantityMeasurementApi/QuantityMeasurementApi.csproj"
 
 # Publish stage
 FROM build AS publish
