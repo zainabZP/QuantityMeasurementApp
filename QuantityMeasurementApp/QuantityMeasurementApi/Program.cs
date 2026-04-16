@@ -25,10 +25,8 @@ public class Program
         builder.Host.UseSerilog();
 
         // ── Database ──────────────────────────────────────────────────────────
-        var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL")
-            ?? builder.Configuration.GetConnectionString("DefaultConnection")
-            ?? throw new InvalidOperationException("Database connection string is not configured.");
-
+        var connectionString = GetConnectionString(builder.Configuration);
+        
         builder.Services.AddDbContext<QuantityMeasurementDbContext>(options =>
             options.UseNpgsql(
                 connectionString,
@@ -154,4 +152,30 @@ public class Program
     }
 
     public static void Main(string[] args) => BuildApp(args).Run();
+
+    private static string GetConnectionString(IConfiguration configuration)
+    {
+        var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+        if (string.IsNullOrEmpty(databaseUrl))
+        {
+            return configuration.GetConnectionString("DefaultConnection") 
+                ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+        }
+
+        if (databaseUrl.StartsWith("postgres://") || databaseUrl.StartsWith("postgresql://"))
+        {
+            var databaseUri = new Uri(databaseUrl);
+            var userInfo = databaseUri.UserInfo.Split(':');
+
+            return $"Host={databaseUri.Host};" +
+                   $"Port={databaseUri.Port};" +
+                   $"Database={databaseUri.AbsolutePath.TrimStart('/')};" +
+                   $"Username={userInfo[0]};" +
+                   $"Password={userInfo[1]};" +
+                   $"SSL Mode=Require;" +
+                   $"Trust Server Certificate=true;";
+        }
+
+        return databaseUrl;
+    }
 }
