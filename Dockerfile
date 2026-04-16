@@ -3,12 +3,12 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 
 WORKDIR /src
 
-# Copy the solution and project files
-COPY ["QuantityMeasurementApp.slnx", "."]
-COPY ["QM.BusinessLogic/QM.BusinessLogic.csproj", "QM.BusinessLogic/"]
-COPY ["QM.Models/QM.Models.csproj", "QM.Models/"]
-COPY ["QM.Repository/QM.Repository.csproj", "QM.Repository/"]
-COPY ["QuantityMeasurementApi/QuantityMeasurementApi.csproj", "QuantityMeasurementApi/"]
+# Copy the solution and project files from QuantityMeasurementApp folder
+COPY ["QuantityMeasurementApp/QuantityMeasurementApp.slnx", "."]
+COPY ["QuantityMeasurementApp/QM.BusinessLogic/QM.BusinessLogic.csproj", "QM.BusinessLogic/"]
+COPY ["QuantityMeasurementApp/QM.Models/QM.Models.csproj", "QM.Models/"]
+COPY ["QuantityMeasurementApp/QM.Repository/QM.Repository.csproj", "QM.Repository/"]
+COPY ["QuantityMeasurementApp/QuantityMeasurementApi/QuantityMeasurementApi.csproj", "QuantityMeasurementApi/"]
 
 # Update project file to use PostgreSQL
 RUN sed -i 's/<PackageReference Include="Microsoft\.EntityFrameworkCore\.SqlServer"/<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL"/g' QM.Repository/QM.Repository.csproj && \
@@ -17,8 +17,8 @@ RUN sed -i 's/<PackageReference Include="Microsoft\.EntityFrameworkCore\.SqlServ
 # Restore dependencies
 RUN dotnet restore "QuantityMeasurementApp.slnx"
 
-# Copy the entire source
-COPY . .
+# Copy the entire source from QuantityMeasurementApp folder
+COPY QuantityMeasurementApp/ .
 
 # Build the project
 RUN dotnet build -c Release -o /app/build "QuantityMeasurementApp.slnx"
